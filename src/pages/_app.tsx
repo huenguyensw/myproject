@@ -2,8 +2,9 @@ import React from 'react'
 import App from 'next/app';
 import Layout from '../components/_layout/layout'
 import { ThemeProvider } from 'styled-components'
-import GlobalStyle from '../styles/globalStyle'
 import theme from '../styles/theme'
+import '../styles/globals.css'
+import TaskProvider from '@/components/context/TaskProvider';
 
 
 class MyApp extends App {
@@ -12,10 +13,11 @@ class MyApp extends App {
 
     return (
       <ThemeProvider theme={theme}>
-        <GlobalStyle />
+        <TaskProvider>
           <Layout>
             <Component {...pageProps} />
           </Layout>
+        </TaskProvider>
       </ThemeProvider>
     );
   }

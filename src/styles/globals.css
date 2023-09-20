@@ -15,8 +15,24 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/Pacifico-Regular.ttf') format('truetype');
+}
 
 body {
+  margin: unset;
+  min-height: 100vh;
+  font-family: 'Montserrat','Pacifico',sans-serif;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,4 +40,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+main {
+  flex: 1;
 }

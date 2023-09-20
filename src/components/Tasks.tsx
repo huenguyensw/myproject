@@ -11,7 +11,7 @@ const Tasks = () => {
 
   return (
     <div className={styleForm.TasksContainer}>
-      <Title >Todo App</Title>
+      <Title> Todo App</Title>
       <AddTask />
       <ul className={styleForm.list}>
         {taskList

@@ -19,7 +19,7 @@ const AddTask = () => {
     }
 
     const handleAddingTask = () => {
-        if (newTask == '') {
+        if (newTask.trim() === '') {
             setErrorMessage('Cannot create an empty task');
         } else {
             setTaskList([...taskList, { id: keyValue, name: newTask }]);
